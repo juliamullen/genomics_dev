@@ -6,7 +6,7 @@ biothings.config_for_app(config)
 import biothings.hub.dataload.dumper
 
 class GenomicsDumper(biothings.hub.dataload.dumper.DummyDumper):
-    SRC_NAME = "genomics"
+    SRC_NAME = "genomics_parser"
     SRC_ROOT_FOLDER = os.path.join(config.DATA_ARCHIVE_ROOT, SRC_NAME)
 
     __metadata__ = {
@@ -17,7 +17,7 @@ class GenomicsDumper(biothings.hub.dataload.dumper.DummyDumper):
                 },
             "code": {
                 "branch": "master",
-                "repo": "https://github.com/juliamullen/genomics"
+                "repo": "https://github.com/juliamullen/genomics_parser"
                 },
             #"url": "",
             #"license": "",

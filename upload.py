@@ -16,8 +16,8 @@ except ImportError:
     from .mapping import mapping_dict
 
 class GenomicsUploader(biothings.hub.dataload.uploader.BaseSourceUploader):
-    main_source = "genomics"
-    name = "genomics"
+    main_source = "genomics_parser"
+    name = "genomics_parser"
 
     __metadata__ = {
         "src_meta": {
@@ -26,8 +26,8 @@ class GenomicsUploader(biothings.hub.dataload.uploader.BaseSourceUploader):
                 "url":  "https://github.com/juliamullen"
                 },
             "code": {
-                "branch": "master",
-                "repo": "https://github.com/outbreak-info/genomics"
+                "branch": "main",
+                "repo": "https://github.com/juliamullen/genomics_parser"
                 },
             #"url": "",
             #"license": "",
