@@ -13,7 +13,7 @@ except ImportError:
     logger.addHandler(handler)
 
 def load_annotations():
-    with open('/Users/julia/Desktop/test_data_model_2021-01-22_v3.json', 'r') as data_file:
+    with open('/home/jmullen/test_data_model_2021-01-22_v3.json', 'r') as data_file:
         data = json.load(data_file)
 
     for datum in data:
