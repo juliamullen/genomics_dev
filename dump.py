@@ -25,3 +25,6 @@ class GenomicsDumper(biothings.hub.dataload.dumper.DummyDumper):
     }
 
     SCHEDULE = None
+
+    def set_release(self):
+        self.release = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M')
