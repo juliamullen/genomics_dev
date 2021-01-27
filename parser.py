@@ -17,6 +17,7 @@ def load_annotations():
         data = json.load(data_file)
 
     for datum in data:
+        datum['_id'] = datum['gisaid_epi_isl']
         yield datum
 
 if __name__ == "__main__":
