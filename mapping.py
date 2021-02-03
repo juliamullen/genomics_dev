@@ -1,6 +1,7 @@
 mapping_dict = {
     "nextstrain_clade": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "keyword_lowercase_normalizer"
     },
     "submitting_lab": {
         "type": "keyword"
@@ -9,6 +10,7 @@ mapping_dict = {
         "type": "keyword"
     },
     "mutations": {
+        "type": "nested",
         "properties": {
             "type": {
                 "type": "keyword"
@@ -55,10 +57,14 @@ mapping_dict = {
         }
     },
     "division": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "keyword_lowercase_normalizer"
+
     },
     "country": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "keyword_lowercase_normalizer"
+
     },
     "gisaid_clade": {
         "type": "keyword"
@@ -82,7 +88,9 @@ mapping_dict = {
         "type": "keyword"
     },
     "pangolin_lineage": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "keyword_lowercase_normalizer"
+
     },
     "location": {
         "type": "keyword"
