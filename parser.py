@@ -1,25 +1,15 @@
 import json
+import gzip
+import os
 
-try:
-    from biothings import config
-    logger = config.logger
-except ImportError:
-    import logging
-    logger = logging.getLogger('genomics')
-    logger.setLevel(logging.DEBUG)
-    handler = logging.FileHandler('genomics_log.log')
-    formatter = logging.Formatter('%(asctime)s - %(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
+from biothings import config
+logger = config.logger
 
-def load_annotations():
-    with open('/home/jmullen/test_data_model_2021-01-22_v3.json', 'r') as data_file:
-        data = json.load(data_file)
+def load_annotations(data_folder):
+    json_path = os.path.join(data_folder, "data.json.gz")
+    with gzip.open(json_path) as f:
+        data = json.loads(f.read().decode('utf-8'))
 
     for datum in data:
         datum['_id'] = datum['gisaid_epi_isl']
         yield datum
-
-if __name__ == "__main__":
-    with open('transformed.json', 'w') as output:
-        json.dump([i for i in load_annotations()], output)
