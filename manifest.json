@@ -1,7 +1,7 @@
 {
     "version": "0.2",
     "dumper" : {
-        "schedule" : "0 12 * * *", 
+        "schedule" : "0 12,21 * * *", 
         "data_url" : ["https://storage.googleapis.com/andersen-lab_temp/outbreak_genomics/data.json.gz"],
         "uncompress" : false 
     },
