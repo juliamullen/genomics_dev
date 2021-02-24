@@ -1,79 +1,69 @@
 def get_customized_mapping(cls):
     return {
-        "nextstrain_clade": {
-            "type": "keyword",
-            "normalizer": "keyword_lowercase_normalizer"
-            },
-        "submitting_lab": {
-            "type": "keyword"
-            },
-        "genbank_accession": {
-            "type": "keyword"
-            },
-        "mutations": {
-            "type": "nested",
-            "properties": {
-                "type": {
-                    "type": "keyword"
-                    },
-                "mutation": {
-                    "type": "keyword"
-                    },
-                "gene": {
-                    "type": "keyword"
-                    },
-                "ref_codon": {
-                    "type": "keyword"
-                    },
-                "pos": {
-                    "type": "keyword"
-                    },
-                "alt_codon": {
-                    "type": "keyword"
-                    },
-                "is_synonymous": {
-                    "type": "keyword"
-                    },
-                "ref_aa": {
-                    "type": "keyword"
-                    },
-                "codon_num": {
-                    "type": "keyword"
-                    },
-                "alt_aa": {
-                    "type": "keyword"
-                    },
-                "absolute_coords": {
-                    "type": "keyword"
-                    },
-                "change_length_nt": {
-                    "type": "keyword"
-                    },
-                "nt_map_coords": {
-                    "type": "keyword"
-                    },
-                "aa_map_coords": {
-                    "type": "keyword"
+            "mutations": {
+                "type": "nested",
+                "properties": {
+                    "type": {
+                        "type": "keyword"
+                        },
+                    "mutation": {
+                        "type": "keyword"
+                        },
+                    "gene": {
+                        "type": "keyword"
+                        },
+                    "ref_codon": {
+                        "type": "keyword"
+                        },
+                    "pos": {
+                        "type": "keyword"
+                        },
+                    "alt_codon": {
+                        "type": "keyword"
+                        },
+                    "is_synonymous": {
+                        "type": "keyword"
+                        },
+                    "ref_aa": {
+                        "type": "keyword"
+                        },
+                    "codon_num": {
+                        "type": "keyword"
+                        },
+                    "alt_aa": {
+                        "type": "keyword"
+                        },
+                    "absolute_coords": {
+                        "type": "keyword"
+                        },
+                    "change_length_nt": {
+                        "type": "keyword"
+                        },
+                    "nt_map_coords": {
+                        "type": "keyword"
+                        },
+                    "aa_map_coords": {
+                        "type": "keyword"
+                        }
                     }
-                }
-            },
-        "division": {
+                },
+            "division": {
+                "type": "keyword",
+                },
+            "division_lowercase": {
                 "type": "keyword",
                 "normalizer": "keyword_lowercase_normalizer"
 
                 },
         "country": {
                 "type": "keyword",
+                },
+        "country_lowercase": {
+                "type": "keyword",
                 "normalizer": "keyword_lowercase_normalizer"
 
                 },
-        "gisaid_clade": {
-                "type": "keyword"
-                },
         "date_submitted": {
-                "type": "keyword"
-                },
-        "originating_lab": {
                 "type": "keyword"
                 },
         "date_collected": {
@@ -99,13 +89,17 @@ def get_customized_mapping(cls):
         "division_id": {
                 "type": "keyword"
                 },
-        "purpose_of_sequencing": {
+        "accession_id": {
                 "type": "keyword"
                 },
-        "gisaid_epi_isl": {
+        "clade": {
                 "type": "keyword"
                 },
-        "strain": {
+        "pango_version": {
+                "type": "keyword"
+                },
+        "country_normed": {
                 "type": "keyword"
                 }
-    }
+
+}
