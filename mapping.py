@@ -50,7 +50,7 @@ def get_customized_mapping(cls):
             "division": {
                 "type": "keyword",
                 },
-            "division_lowercase": {
+            "division_lower": {
                 "type": "keyword",
                 "normalizer": "keyword_lowercase_normalizer"
 
@@ -58,7 +58,7 @@ def get_customized_mapping(cls):
         "country": {
                 "type": "keyword",
                 },
-        "country_lowercase": {
+        "country_lower": {
                 "type": "keyword",
                 "normalizer": "keyword_lowercase_normalizer"
 
