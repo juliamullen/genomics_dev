@@ -7,7 +7,8 @@ def get_customized_mapping(cls):
                         "type": "keyword"
                         },
                     "mutation": {
-                        "type": "keyword"
+                        "type": "keyword",
+                        "normalizer": "keyword_lowercase_normalizer"
                         },
                     "gene": {
                         "type": "keyword"
