@@ -86,6 +86,10 @@ def get_customized_mapping(cls):
         "location": {
                 "type": "keyword"
                 },
+        "location_lower": {
+                "type": "keyword",
+                "normalizer": "keyword_lowercase_normalizer"
+                },
         "division_id": {
                 "type": "keyword"
                 },
