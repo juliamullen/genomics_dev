@@ -7,7 +7,7 @@ logger = config.logger
 
 def load_annotations(data_folder):
 
-    json_path = os.path.join(data_folder, "test_api_data.json")
+    json_path = os.path.join(data_folder, "test_api_data.json.gz")
     with gzip.open(json_path) as f:
         for line in f:
             datum = json.loads(line)
