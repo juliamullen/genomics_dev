@@ -6,7 +6,8 @@ from biothings import config
 logger = config.logger
 
 def load_annotations(data_folder):
-    json_path = os.path.join(data_folder, "test_api_metadata.json")
+
+    json_path = os.path.join(data_folder, "test_api_data.json")
     with gzip.open(json_path) as f:
         for line in f:
             datum = json.loads(line)
